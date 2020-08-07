@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: analyze-none
+
+
+management:
+  endpoints:
+    jmx:
+      exposure: include=*
+
+    web:
+      exposure: include=*
+  health:
+    show-details: always
+
+
+# spring cloud access&secret config
+# 可以访问如下地址查看: https://usercenter.console.aliyun.com/#/manage/ak
+alibaba:
+  cloud:
+    access-key: 123
+    secret-key: 123
+
+#需要分析的接口Excel文件路径
+analyze:
+  interface-excel-dir: E:\\埋点数据统计\\移动阅卷\\功能列表.xlsx
+  nginx-log-dir: E:\\埋点数据统计\\access.log
+  result-dir: E:\\埋点数据统计\\nginx_log_analyze_result.xlsx
